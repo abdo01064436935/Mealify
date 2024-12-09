@@ -1,0 +1,933 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+:root{
+    --font-family :"Amatic SC" ;
+}
+
+
+
+
+
+
+.nav {
+    width: 100%;
+    height: 100px;
+display: flex;
+
+}
+
+.nav .container {
+    display: flex;
+
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.nav .container h1 a {
+    color: black;
+}
+
+.nav .container h1::after {
+    content: ".";
+    color: #CE1212;
+
+}
+
+
+.nav .container ul {
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+
+}
+
+.nav .container ul li {
+    text-decoration: none;
+
+}
+
+.nav .container ul li a {
+    text-decoration: none;
+    color: gray;
+    height: 50%;
+    font-size: 18px;
+    transition: 0.5s all;
+    font-weight: bold;
+}
+
+.nav .container ul li a .linered {
+
+    width: 0%;
+    height: 2.5px;
+    margin-top: 5px;
+    transition: 0.5s all;
+
+}
+
+.nav .container ul li:has() .linered {
+    color: teal;
+    width: 100%;
+}
+
+
+
+
+
+.nav .container ul li:target a {
+
+    color: black;
+
+}
+
+.nav .container ul li:hover a {
+
+    color: black;
+
+}
+
+.nav .container ul li:target .linered {
+    background-color: #CE1212;
+    width: 100%;
+
+
+}
+
+.nav .container ul li:hover .linered {
+    background-color: #CE1212;
+    width: 100%;
+
+}
+
+
+
+
+
+
+.nav .container h1 a {
+    text-decoration: none;
+
+
+}
+
+
+
+
+.nav .dark {
+    background-color: #CE1212;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav .dark i {
+    font-size: 20px;
+
+}
+
+
+
+.nav .layer {
+    background-color: blueviolet;
+    position: absolute;
+    top: 100%;
+
+}
+
+
+.nav .layer i {
+    font-size: 20px;
+
+}
+
+.nav .dark:checked .layer {
+    top: 0%;
+}
+
+
+@media screen and (min-width: 640px) {
+    .nav{
+        flex-direction: column;
+    }
+}
+
+
+.home {
+    width: 100%;
+
+    text-align: center;
+    background-color: #EEEEEE;
+
+}
+
+.home .image {
+
+    width: 90%;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.667) 4px 4px 9px);
+}
+
+.home .image img {
+    width: 100%;
+
+}
+
+.home .title {
+    margin: auto;
+}
+
+.home .h {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.home .h h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: var(--font-family) ;
+    font-size: 60px;
+
+}
+
+.home .h p {
+    margin-top: 20px;
+    color: #4F4F5A;
+}
+
+.home .book button {
+    background-color: #CE1212;
+    height: 50px;
+
+    margin: 30px 10px;
+    width: 150px;
+    border-radius: 40px;
+    border: transparent;
+}
+
+.home .book button a {
+    text-decoration: none;
+    color: white;
+}
+
+.home .book a i {
+    font-size: 30px;
+    padding: 5px 10px;
+}
+
+.home .book a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 640px) {
+    .home {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+
+    .home .image {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+
+    .home .image {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .home {
+        display: flex;
+        flex-direction: row-reverse;
+
+
+    }
+
+    .home .title {
+        text-align: left;
+        width: 30%;
+
+
+    }
+
+    .home .title p {
+        line-height: 1.4;
+    }
+
+    .home .image {
+        width: 35%;
+
+    }
+
+}
+
+
+.chefs {
+
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+
+
+}
+
+
+.caption h1 {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: var(--font-family) ;
+    font-size: 60px;
+}
+
+.caption p {
+    color: #4F4F5A;
+}
+
+.chefs .container {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+
+}
+
+.chefs .container .item {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: #4F4F5A 20px;
+
+    transition: 0.5s all;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chefs .container .item .image img {
+    width: 100%;
+    align-content: center;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.chefs .container .item h2 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+
+.chefs .container .item p {
+    padding-bottom: 5px;
+    color: #7F7F90;
+}
+
+.chefs .container .item .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.chefs .container .item .image .layer {
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    width: 50px;
+    top: 50px;
+    right: 10px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    transition: 0.5s 0.5s all;
+
+
+
+}
+
+.chefs .container .item .image .layer i {
+    margin: auto;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: gray;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 640px) {
+
+    .chefs .container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+
+
+
+
+
+    }
+
+
+    .chefs .container .item:hover {
+        transform: scale(1.05);
+
+    }
+
+    .chefs .container .item .image:hover .layer {
+        left: 85%;
+    }
+
+    .chefs .container .item .image .layer i:hover {
+        color: black;
+    }
+
+
+}
+
+
+.gallery {
+    background-color: #EEEEEE;
+    text-align: center;
+    width: 100%;
+
+}
+
+.gallery .captiongallery {
+    padding-top: 80px;
+
+}
+
+.gallery .captiongallery h1 {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: var(--font-family) ;
+    font-size: 60px;
+}
+
+
+.gallery .captiongallery p {
+    color: #7F7F90;
+}
+
+.gallery .images {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.row {
+
+    display: flex;
+
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 20px;
+}
+
+
+.column {
+    -ms-flex: 30%;
+    flex: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.column img {
+
+    vertical-align: middle;
+    width: 100%;
+
+
+
+}
+
+.images .column .test {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border: 5px solid white;
+    width: 100%;
+
+}
+
+.images .column .test .layer {
+
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s all;
+
+}
+
+.images .column .test .layer img {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.images .column .test .layer h1 {
+    padding-top: 120px;
+    color: white;
+}
+
+.images .column .test .layer p {
+    color: white;
+}
+
+.column .test:hover .layer {
+    top: 0%;
+}
+
+.contact {
+
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.contact .captioncontact p {
+    padding-bottom: 20px;
+    color: #7F7F90;
+
+}
+
+.contact .captioncontact h1 {
+    display: inline-block;
+    font-family: var(--font-family) ;
+    font-size: 60px;
+
+
+}
+
+.contact .map {
+    margin-top: 30px;
+
+    width: 90%;
+    height: 300px;
+    margin: auto;
+
+}
+
+
+
+
+
+.contact .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact .data {
+
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .data .our {
+    background-color: #EEEEEE;
+    width: 90%;
+    height: 100px;
+    position: relative;
+
+    margin-left: 20px;
+    margin-top: 30px;
+    display: flex;
+
+
+}
+
+
+.contact .data .our .icon {
+    background-color: #CE1212;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+
+
+}
+
+.contact .data .our i {
+
+    padding: 15px 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.contact .data .our .text {
+
+    position: absolute;
+    top: 25px;
+    left: 90px;
+    height: 50%;
+    text-align: start;
+}
+
+.contact .data .our h2 {
+
+
+    color: #7F7F90;
+}
+
+.contact .data .our h4 {
+
+
+    color: #4F4F5A;
+}
+
+
+
+.contact .input {
+    width: 100%;
+    background-color: teal;
+    margin: auto;
+}
+
+.contact .input .form {
+    background-color: tomato;
+    width: 90%;
+}
+
+
+@media screen and (min-width: 640px) {
+    .contact .data {
+        flex-direction: row;
+    }
+}
+
+
+.contact .write {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    width: 95%;
+
+
+    margin: auto;
+
+}
+
+.contact .write form {
+    width: 100%;
+
+}
+
+.contact .write input {
+    height: 50px;
+    width: 90%;
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+
+
+.contact .write .self {
+    width: 90%;
+}
+
+.contact .write .self2 {
+    width: 90%;
+}
+
+.contact .write textarea {
+    width: 90%;
+    height: 140px;
+
+    padding: 10px;
+}
+
+.contact button {
+    height: 50px;
+    width: 200px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background-color: #CE1212;
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+
+
+@media screen and (min-width: 780px) {
+
+    .contact .write .self {
+        width: 45%;
+        float: left;
+        margin-left: 65px;
+    }
+
+    .contact .write .self2 {
+        width: 45%;
+        float: right;
+        margin-right: 65px;
+    }
+
+}
+
+
+
+
+.mealify {
+    background-color: black;
+    margin-top: 100px;
+
+}
+
+.mealify .divs {
+    width: 80%;
+    margin: auto;
+    column-gap: 20px;
+}
+
+.mealify img {
+    width: 40px;
+    height: 40px;
+
+}
+
+
+
+.mealify .image {
+
+
+    padding-top: 20px;
+}
+
+.mealify .image img {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.mealify .image h1 {
+    color: white;
+    float: right;
+    padding-right: 210px;
+
+}
+
+.mealify .image h4 {
+    color: white;
+}
+
+.mealify .image h1::after {
+    content: ".";
+    color: #CE1212;
+}
+
+
+.mealify .image h2 {
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+.mealify .image .line {
+    margin: 10px;
+    background-color: gray;
+    height: 3px;
+    width: 90%;
+
+
+}
+
+.mealify .image i {
+    font-size: 25px;
+    margin: 10px 30px;
+    color: white;
+}
+
+
+.mealify .div2 h2 {
+    color: white;
+    padding: 10px;
+    text-align: start;
+
+}
+
+.mealify .div2 h4 {
+    color: white;
+    padding-bottom: 40px;
+    text-align: start;
+}
+
+.mealify .div2 form h4 {
+    color: white;
+    text-align: start;
+    margin-bottom: 20px;
+
+
+}
+
+.mealify .div2 input {
+    width: 95%;
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+
+}
+
+
+.mealify .div2 .subscribe {
+
+    width: 40%;
+    height: 45px;
+    margin: auto;
+    display: flex;
+
+}
+
+.mealify .div2 .subscribe i {
+    font-size: 20px;
+    padding-top: 12px;
+
+}
+
+
+
+.mealify .div2 form a .bat {
+    width: 95%;
+    height: 50px;
+    border-radius: 0px;
+    margin-top: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+.mealify .div2 .links {
+
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s all;
+    text-align: start;
+    margin-left: 3%;
+    margin-bottom: 10px;
+    float: left;
+    grid-column: 20px;
+}
+
+.mealify .div2 .links a {
+    font-size: 20px;
+    padding-left: 5%;
+    text-decoration: none;
+    color: white;
+}
+
+.mealify .div2 .links .layer {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+
+
+}
+
+.mealify .div2 .links:hover {
+    margin-left: 6%;
+}
+
+.mealify .div2 .links:hover .layer {
+    top: 0%;
+}
+
+
+
+.mealify .div3 {
+
+    text-align: start;
+    padding-left: 3%;
+    margin-top: 5%;
+}
+
+.mealify .div3 .infor {
+
+    width: 100%;
+    margin: 10px;
+}
+
+.mealify .div3 .infor i {
+    font-size: 20px;
+    float: left;
+    color: #CE1212;
+
+}
+
+.mealify .div3 .infor h4 {
+    float: right;
+
+
+
+    color: white;
+}
+
+.mealify .div3 .infor a {
+    padding-left: 8px;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+@media screen and (min-width: 640px) {
+    .mealify .divs {
+        display: flex;
+    }
+}
